@@ -12,7 +12,7 @@ Describe "Datum" {
         }
 
         It "Description" {
-            Resolve-Datum -searchPaths $datumConfig.ResolutionPrecedence -DatumStructure $datum -PropertyPath 'Description' -Node $node | Should Be 'This is the DEV environment'
+            Resolve-Datum -searchPaths $datumConfig.ResolutionPrecedence -DatumStructure $datum -PropertyPath 'Description' -Node $node | Should Be 'Dev version of SRV01'
         }
 
         It "ExampleProperty1" {

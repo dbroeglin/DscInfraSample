@@ -22,6 +22,7 @@ DatumStructure:
 
 ResolutionPrecedence:
   - 'AllNodes\$($Node.Environment)\$($Node.Name)'
+  - 'Environments\$($Node.Environment)'
   - 'SiteData\$($Node.Location)'
   - 'SiteData\$($Node.Location)\Roles' #variable expansion
   - 'Roles\$($Node.Role)' #if Node has unique role, otherwise use <%= $CurrentNode.PSObject.Properties.where{$_.Name -in $Node.Role}.Value %>
